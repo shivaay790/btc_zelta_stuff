@@ -1,3 +1,4 @@
+
 import talib as ta
 import pandas as pd
 import numpy as np
@@ -12,7 +13,7 @@ class TradeType(Enum):
     HOLD = "HOLD"
 
 class Strategy:
-    def __init__(self, rsi_period=10, rsi_overbought=85, rsi_oversold=15, atr_period=14, atr_multiplier=3.0, risk_pct=1.0, dip_drop_pct=0.01, dip_drop_atr_mult=1.0, dip_consol_window=6, dip_consol_atr_mult=0.7, profit_threshold=0.01):
+    def __init__(self, rsi_period=10, rsi_overbought=85, rsi_oversold=15, atr_period=10, atr_multiplier=4.0, risk_pct=1.0, dip_drop_pct=0.01, dip_drop_atr_mult=1.0, dip_consol_window=6, dip_consol_atr_mult=0.7, profit_threshold=0.5):
         self.rsi_period = rsi_period
         self.rsi_overbought = rsi_overbought
         self.rsi_oversold = rsi_oversold
